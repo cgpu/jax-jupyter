@@ -31,7 +31,12 @@
 <br/><br/>
 
 
-### 1. Introduction to literate programming workflows with Jupyter Notebooks
+### 1. Introduction to literate programming workflows with Jupyter Notebooks on CloudOS
+
+
+#### Set up your instance for version control
+
+After you have forked the repository, `<USER_aka_you>/jax-jupyter`, click on <img src="img/clone_or_download.png"  width="85" align="center" > and click `SSH` to change the url.
 
 #### Configuration of Jupyter Notebooks on Lifebit CloudOS
 
@@ -44,15 +49,25 @@ Installing packages
 - with `pip`
 - with `conda`
 
-Adding conda channels on our machine:
+To add conda channels on our machine, go to [CloudOS](https://cloudos.lifebit.ai) and initialise a Jupyter Notebook session.
+
+- Click `New analysis` > `Jupyter Session`
+- Create a new Project by clicking `New` and name it `reproducible-paper.
+- Choose an instance, for example `m1.xlarge` which has 4cpus and 15Gb RAM (it should be more than enough).
+
+Once the instance has initialised, go to your Jupyter Notebook session and click on the top left corner `File` > `New` > `Terminal`.
+
+This will open a terminal. Type the following commands to add conda channels, so that we can subsequently install libraries with conda:
 
 ```
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
-
+    
 </details>
+
+
 
 #### Jupyter Shortcuts Cheatsheet
 
@@ -133,10 +148,4 @@ Make an issue and file the problems we have noticed
 ### 5. Integrative Genomics Viewer on Lifebit CloudOS  
 
 Moving on to our last part of our tutorial, we will learn how to use Integrative Genomics Viewer (IGV) on the CloudOS platform and easily connect data from your cloud provider. Contrary to the usual configuration required to use IGV, there are no prerequisites or installation steps to use IGV on CloudOS, nor the need to copy data. To access data we will simply link the data from our cloud storage provider and continue with the IGV analysis.
-
-#### Step 1
-
-#### Step 2
-
-#### Step 3
 
